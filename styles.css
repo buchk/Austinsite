@@ -5,3 +5,6 @@
 
 /* Mobile: inset the complete hero artwork panel from both viewport edges. */
 @media(max-width:560px){main#top .hero{padding-left:0;padding-right:0}main#top .hero .heroart{display:block;width:calc(100% - 12vw)!important;max-width:calc(100% - 12vw)!important;margin-left:6vw!important;margin-right:6vw!important;border-radius:8px;overflow:hidden}}
+
+/* Mobile layout normalization: no horizontal canvas, consistent section rhythm. */
+@media(max-width:560px){body{overflow-x:clip}main,header,footer,.hero,.section,.services,.heading,.firewood,.estimate{min-width:0;max-width:100%}.hero>*{min-width:0}.copy{width:100%;max-width:100%}.hero h1{overflow-wrap:anywhere}.actions,.trust{max-width:100%}.services article{min-width:0}.estimate form{min-width:0}.heading{width:100%}#services .heading{text-align:center}#services .heading>div{width:100%}#services .eyebrow{text-align:center}main#top .hero .heroart{width:88%!important;max-width:88%!important;margin-left:auto!important;margin-right:auto!important}}
