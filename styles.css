@@ -55,3 +55,43 @@ header:has(.header-brand){min-height:128px;padding-top:8px;padding-bottom:8px}
 @media(max-width:560px){
   .services .service-crop{aspect-ratio:1.7}
 }
+
+/* Mockup-inspired masthead: centered emblem overlaps the forest hero. */
+.masthead{
+  position:relative;
+  z-index:10;
+  display:grid;
+  grid-template-columns:1fr 150px 1fr;
+  align-items:center;
+  min-height:118px!important;
+  padding:0 7vw!important;
+  overflow:visible;
+  background:var(--paper);
+}
+.masthead .header-brand{position:absolute;left:50%;top:18px;transform:translateX(-50%);z-index:12}
+.masthead .brand-logo{
+  width:142px;
+  height:142px;
+  flex-basis:142px;
+  border:7px solid var(--paper);
+  box-shadow:0 2px 0 rgba(0,0,0,.08);
+}
+.masthead nav{display:flex;gap:30px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:.09em}
+.masthead .mast-left{justify-self:end;margin-right:92px}
+.masthead .mast-right{justify-self:start;margin-left:92px}
+.hero{position:relative}
+.heroart{border-top:0}
+@media(max-width:900px){
+  .masthead{grid-template-columns:1fr 120px 1fr;min-height:104px!important;padding:0 5vw!important}
+  .masthead nav{display:flex;gap:18px;font-size:10px}
+  .masthead .mast-left{margin-right:70px}
+  .masthead .mast-right{margin-left:70px}
+  .masthead .brand-logo{width:122px;height:122px;flex-basis:122px;border-width:6px}
+}
+@media(max-width:560px){
+  .masthead{display:flex;justify-content:center;min-height:112px!important;padding:0 16px!important}
+  .masthead nav{display:none}
+  .masthead .header-brand{top:12px}
+  .masthead .brand-logo{width:126px;height:126px;flex-basis:126px;border-width:6px}
+  .hero .copy{padding-top:72px}
+}
