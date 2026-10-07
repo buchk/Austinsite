@@ -11,3 +11,6 @@
 
 /* Photo-led service cards */
 .services article{padding:0 0 28px;overflow:hidden;min-width:0}.service-photo{display:block;width:100%;height:195px;object-fit:cover;background:#343a2e}.services h3{margin:25px 24px 12px}.services article p{margin:0 24px;line-height:1.65}@media(max-width:900px){.service-photo{height:210px}}@media(max-width:560px){.services article{padding:0 0 26px}.services h3{margin:22px 22px 10px}.services article p{margin:0 22px}.service-photo{height:210px}}
+
+/* Brand cleanup: one prominent header wordmark, no second circular badge. */
+header .brand strong{font-size:clamp(25px,2.6vw,38px);letter-spacing:.025em}header .brand>b{width:54px;height:54px;font-size:29px}header{min-height:92px;height:auto;padding-top:14px;padding-bottom:14px}.heroart{background-position:center}.badge{display:none}@media(max-width:560px){header .brand strong{font-size:25px}header .brand>b{width:44px;height:44px;font-size:25px}header{min-height:76px}}
