@@ -14,3 +14,44 @@
 
 /* Brand cleanup: one prominent header wordmark, no second circular badge. */
 header .brand strong{font-size:clamp(25px,2.6vw,38px);letter-spacing:.025em}header .brand>b{width:54px;height:54px;font-size:29px}header{min-height:92px;height:auto;padding-top:14px;padding-bottom:14px}.heroart{background-position:center}.badge{display:none}@media(max-width:560px){header .brand strong{font-size:25px}header .brand>b{width:44px;height:44px;font-size:25px}header{min-height:76px}}
+
+/* Use the upper circular emblem from the new composite artwork.
+   Cropping is done entirely in CSS; the original asset stays unchanged. */
+header .header-brand{display:flex;align-items:center;gap:0;min-width:0}
+header .brand-logo{
+  display:block;
+  width:112px;
+  height:112px;
+  flex:0 0 112px;
+  border-radius:50%;
+  background-color:#171813;
+  background-image:url('ede098f2-5f65-4f84-986c-013e05b63aa7.png');
+  background-repeat:no-repeat;
+  background-size:300% auto;
+  background-position:center top;
+}
+header:has(.header-brand){min-height:128px;padding-top:8px;padding-bottom:8px}
+@media(max-width:560px){
+  header .brand-logo{width:90px;height:90px;flex-basis:90px}
+  header:has(.header-brand){min-height:104px;padding-top:7px;padding-bottom:7px}
+}
+
+/* Crop each service photo from its quadrant of the original 2x2 artwork.
+   Zooming to 300% keeps the titles printed on that artwork out of view. */
+.services .service-crop{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1.65;
+  background-image:url('e1437059-ce1c-4e2d-83a7-e2eaf67fb90a.png');
+  background-repeat:no-repeat;
+  background-size:300% auto;
+  background-color:#343a2e;
+}
+.services .service-crop-1{background-position:left top}
+.services .service-crop-2{background-position:right top}
+.services .service-crop-3{background-position:0% 71%}
+.services .service-crop-4{background-position:100% 71%}
+@media(max-width:560px){
+  .services .service-crop{aspect-ratio:1.7}
+}
