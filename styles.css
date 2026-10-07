@@ -8,3 +8,6 @@
 
 /* Mobile layout normalization: no horizontal canvas, consistent section rhythm. */
 @media(max-width:560px){body{overflow-x:clip}main,header,footer,.hero,.section,.services,.heading,.firewood,.estimate{min-width:0;max-width:100%}.hero>*{min-width:0}.copy{width:100%;max-width:100%}.hero h1{overflow-wrap:anywhere}.actions,.trust{max-width:100%}.services article{min-width:0}.estimate form{min-width:0}.heading{width:100%}#services .heading{text-align:center}#services .heading>div{width:100%}#services .eyebrow{text-align:center}main#top .hero .heroart{width:88%!important;max-width:88%!important;margin-left:auto!important;margin-right:auto!important}}
+
+/* Photo-led service cards */
+.services article{padding:0 0 28px;overflow:hidden;min-width:0}.service-photo{display:block;width:100%;height:195px;object-fit:cover;background:#343a2e}.services h3{margin:25px 24px 12px}.services article p{margin:0 24px;line-height:1.65}@media(max-width:900px){.service-photo{height:210px}}@media(max-width:560px){.services article{padding:0 0 26px}.services h3{margin:22px 22px 10px}.services article p{margin:0 22px}.service-photo{height:210px}}
